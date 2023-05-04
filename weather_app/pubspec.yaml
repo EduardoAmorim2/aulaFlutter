@@ -19,6 +19,7 @@ dependencies:
   get: ^4.6.5
   flutter_screenutil: ^5.7.0
   built_value: ^8.5.0
+  dio: ^5.1.1
 
 dev_dependencies:
   flutter_test:
