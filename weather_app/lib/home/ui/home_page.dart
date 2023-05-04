@@ -7,6 +7,8 @@ class HomePage extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    return BaseBody(child: HomeBody());
+    return BaseBody(
+      child: HomeBody(),
+    );
   }
 }
