@@ -49,24 +49,24 @@ class HomeBody extends StatelessWidget {
                   Text('Min.: 25º'),
                 ],
               ),
-              Center(
-                child: Container(
-                  decoration: BoxDecoration(
-                      color: Colors.blueAccent,
-                      borderRadius: BorderRadius.circular(20.w)),
-                  child: Row(
-                    mainAxisAlignment: MainAxisAlignment.center,
-                    children: [
-                      Icon(Icons.sunny_snowing),
-                      Text('6%'),
-                      SizedBox(width: 10.w),
-                      Icon(Icons.sunny_snowing),
-                      Text('Te'),
-                      SizedBox(width: 10.w),
-                      Icon(Icons.sunny_snowing),
-                      Text('Ste'),
-                    ],
-                  ),
+              Container(
+                decoration: BoxDecoration(
+                  color: Colors.blueAccent,
+                  borderRadius: BorderRadius.circular(20.w),
+                ),
+                child: Row(
+                  mainAxisSize: MainAxisSize.min,
+                  mainAxisAlignment: MainAxisAlignment.center,
+                  children: [
+                    Icon(Icons.sunny_snowing),
+                    Text('6%'),
+                    SizedBox(width: 10.w),
+                    Icon(Icons.water_drop_outlined),
+                    Text('90%'),
+                    SizedBox(width: 10.w),
+                    Icon(Icons.cloudy_snowing),
+                    Text('19Km/h'),
+                  ],
                 ),
               )
             ],
