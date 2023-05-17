@@ -202,3 +202,150 @@ abstract class _WeatherModel implements WeatherModel {
   _$$_WeatherModelCopyWith<_$_WeatherModel> get copyWith =>
       throw _privateConstructorUsedError;
 }
+
+ListWeatherModel _$ListWeatherModelFromJson(Map<String, dynamic> json) {
+  return _ListWeatherModel.fromJson(json);
+}
+
+/// @nodoc
+mixin _$ListWeatherModel {
+  List<WeatherModel?>? get listWeather => throw _privateConstructorUsedError;
+
+  Map<String, dynamic> toJson() => throw _privateConstructorUsedError;
+  @JsonKey(ignore: true)
+  $ListWeatherModelCopyWith<ListWeatherModel> get copyWith =>
+      throw _privateConstructorUsedError;
+}
+
+/// @nodoc
+abstract class $ListWeatherModelCopyWith<$Res> {
+  factory $ListWeatherModelCopyWith(
+          ListWeatherModel value, $Res Function(ListWeatherModel) then) =
+      _$ListWeatherModelCopyWithImpl<$Res, ListWeatherModel>;
+  @useResult
+  $Res call({List<WeatherModel?>? listWeather});
+}
+
+/// @nodoc
+class _$ListWeatherModelCopyWithImpl<$Res, $Val extends ListWeatherModel>
+    implements $ListWeatherModelCopyWith<$Res> {
+  _$ListWeatherModelCopyWithImpl(this._value, this._then);
+
+  // ignore: unused_field
+  final $Val _value;
+  // ignore: unused_field
+  final $Res Function($Val) _then;
+
+  @pragma('vm:prefer-inline')
+  @override
+  $Res call({
+    Object? listWeather = freezed,
+  }) {
+    return _then(_value.copyWith(
+      listWeather: freezed == listWeather
+          ? _value.listWeather
+          : listWeather // ignore: cast_nullable_to_non_nullable
+              as List<WeatherModel?>?,
+    ) as $Val);
+  }
+}
+
+/// @nodoc
+abstract class _$$_ListWeatherModelCopyWith<$Res>
+    implements $ListWeatherModelCopyWith<$Res> {
+  factory _$$_ListWeatherModelCopyWith(
+          _$_ListWeatherModel value, $Res Function(_$_ListWeatherModel) then) =
+      __$$_ListWeatherModelCopyWithImpl<$Res>;
+  @override
+  @useResult
+  $Res call({List<WeatherModel?>? listWeather});
+}
+
+/// @nodoc
+class __$$_ListWeatherModelCopyWithImpl<$Res>
+    extends _$ListWeatherModelCopyWithImpl<$Res, _$_ListWeatherModel>
+    implements _$$_ListWeatherModelCopyWith<$Res> {
+  __$$_ListWeatherModelCopyWithImpl(
+      _$_ListWeatherModel _value, $Res Function(_$_ListWeatherModel) _then)
+      : super(_value, _then);
+
+  @pragma('vm:prefer-inline')
+  @override
+  $Res call({
+    Object? listWeather = freezed,
+  }) {
+    return _then(_$_ListWeatherModel(
+      listWeather: freezed == listWeather
+          ? _value._listWeather
+          : listWeather // ignore: cast_nullable_to_non_nullable
+              as List<WeatherModel?>?,
+    ));
+  }
+}
+
+/// @nodoc
+@JsonSerializable()
+class _$_ListWeatherModel implements _ListWeatherModel {
+  _$_ListWeatherModel({final List<WeatherModel?>? listWeather})
+      : _listWeather = listWeather;
+
+  factory _$_ListWeatherModel.fromJson(Map<String, dynamic> json) =>
+      _$$_ListWeatherModelFromJson(json);
+
+  final List<WeatherModel?>? _listWeather;
+  @override
+  List<WeatherModel?>? get listWeather {
+    final value = _listWeather;
+    if (value == null) return null;
+    if (_listWeather is EqualUnmodifiableListView) return _listWeather;
+    // ignore: implicit_dynamic_type
+    return EqualUnmodifiableListView(value);
+  }
+
+  @override
+  String toString() {
+    return 'ListWeatherModel(listWeather: $listWeather)';
+  }
+
+  @override
+  bool operator ==(dynamic other) {
+    return identical(this, other) ||
+        (other.runtimeType == runtimeType &&
+            other is _$_ListWeatherModel &&
+            const DeepCollectionEquality()
+                .equals(other._listWeather, _listWeather));
+  }
+
+  @JsonKey(ignore: true)
+  @override
+  int get hashCode => Object.hash(
+      runtimeType, const DeepCollectionEquality().hash(_listWeather));
+
+  @JsonKey(ignore: true)
+  @override
+  @pragma('vm:prefer-inline')
+  _$$_ListWeatherModelCopyWith<_$_ListWeatherModel> get copyWith =>
+      __$$_ListWeatherModelCopyWithImpl<_$_ListWeatherModel>(this, _$identity);
+
+  @override
+  Map<String, dynamic> toJson() {
+    return _$$_ListWeatherModelToJson(
+      this,
+    );
+  }
+}
+
+abstract class _ListWeatherModel implements ListWeatherModel {
+  factory _ListWeatherModel({final List<WeatherModel?>? listWeather}) =
+      _$_ListWeatherModel;
+
+  factory _ListWeatherModel.fromJson(Map<String, dynamic> json) =
+      _$_ListWeatherModel.fromJson;
+
+  @override
+  List<WeatherModel?>? get listWeather;
+  @override
+  @JsonKey(ignore: true)
+  _$$_ListWeatherModelCopyWith<_$_ListWeatherModel> get copyWith =>
+      throw _privateConstructorUsedError;
+}

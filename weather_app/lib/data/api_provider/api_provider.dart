@@ -1,22 +1,27 @@
 import 'package:dio/dio.dart';
+import 'package:flutter/cupertino.dart';
 
 class ApiProvider {
-  final String _baseUrl = 'https://api.example.com';
+  final String _baseUrl = 'http://api.weatherapi.com/v1/';
+  final String _apiKey = 'key=ddcdd34a4b7f4e318e6230959230305';
 
   final Dio _dio = Dio(BaseOptions(
-    baseUrl: 'https://apiquevamosutilizar.com',
+    baseUrl: 'http://api.weatherapi.com/v1/',
   ));
 
-  static final ApiProvider _instance = ApiProvider._internal();
+  static final ApiProvider instance = ApiProvider._internal();
 
   factory ApiProvider() {
-    return _instance;
+    return instance;
   }
 
   ApiProvider._internal();
 
-  Future<Response> get(String relativeUrl, {Map<String, dynamic>? queryParameters, Options? options}) async {
+  Future<Response> get(String relativeUrl,
+      {Map<String, dynamic>? queryParameters, Options? options}) async {
     try {
+      relativeUrl = _baseUrl + relativeUrl + _apiKey;
+      debugPrint(relativeUrl);
       final response = await _dio.get(
         relativeUrl,
         queryParameters: queryParameters,
@@ -30,7 +35,9 @@ class ApiProvider {
   }
 
   Future<Response> post(String relativeUrl,
-      {dynamic data, Map<String, dynamic>? queryParameters, Options? options}) async {
+      {dynamic data,
+      Map<String, dynamic>? queryParameters,
+      Options? options}) async {
     try {
       final response = await _dio.post(
         relativeUrl,

@@ -15,3 +15,13 @@ class WeatherModel with _$WeatherModel {
   factory WeatherModel.fromJson(Map<String, dynamic> json) =>
       _$WeatherModelFromJson(json);
 }
+
+@freezed
+class ListWeatherModel with _$ListWeatherModel {
+  factory ListWeatherModel({
+    List<WeatherModel?>? listWeather,
+  }) = _ListWeatherModel;
+
+  factory ListWeatherModel.fromJson(Map<String, dynamic> json) =>
+      _$ListWeatherModelFromJson(json);
+}
